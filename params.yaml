@@ -1,0 +1,14 @@
+split:
+  test_size: 0.2
+  random_state: 42
+
+scaling:
+  method: standard
+
+grid_search:
+  cv: 5
+  scoring: neg_mean_squared_error
+  n_jobs: -1
+
+model:
+  random_state: 42
