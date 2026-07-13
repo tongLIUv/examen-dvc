@@ -2,13 +2,20 @@ split:
   test_size: 0.2
   random_state: 42
 
-scaling:
-  method: standard
-
 grid_search:
   cv: 5
   scoring: neg_mean_squared_error
   n_jobs: -1
+  n_estimators:
+    - 100
+    - 200
+  max_depth:
+    - 5
+    - 10
+    - null
+  min_samples_split:
+    - 2
+    - 5
 
 model:
   random_state: 42
